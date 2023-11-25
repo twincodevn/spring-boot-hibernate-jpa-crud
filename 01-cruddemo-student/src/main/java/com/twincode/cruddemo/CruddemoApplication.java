@@ -24,9 +24,22 @@ public class CruddemoApplication {
 //			createMultipleStudent(studentDAO);
 //			readStudent(studentDAO);
 //			readStudents(studentDAO);
-			updateStudent(studentDAO);
-
+//			updateStudent(studentDAO);
+//			deleteStudent(studentDAO);
+			deleteAllStudent(studentDAO);
 		};
+	}
+
+	private void deleteAllStudent(StudentDAO studentDAO) {
+		System.out.println("Deleting all students ... ");
+		studentDAO.deleteAll();
+	}
+
+	private void deleteStudent(StudentDAO studentDAO) {
+		// retrieve the student with id = 1
+		int student_id = 3;
+		System.out.println("Delete student by id " + student_id);
+		studentDAO.delete(3);
 	}
 
 	private void updateStudent(StudentDAO studentDAO) {

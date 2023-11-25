@@ -21,12 +21,12 @@ public class CruddemoApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		return runner -> {
 //			createStudent(studentDAO);
-//			createMultipleStudent(studentDAO);
+			createMultipleStudent(studentDAO);
 //			readStudent(studentDAO);
 //			readStudents(studentDAO);
 //			updateStudent(studentDAO);
 //			deleteStudent(studentDAO);
-			deleteAllStudent(studentDAO);
+//			deleteAllStudent(studentDAO);
 		};
 	}
 
@@ -95,7 +95,7 @@ public class CruddemoApplication {
 
 	private void createMultipleStudent(StudentDAO studentDAO) {
 		// create multiple students
-		System.out.println("Creating 3 students objs...");
+		System.out.println("Creating 2 students objs...");
 		Student s = new Student("Tuan","Dinh","tuandn2904@gmail.com");
 		Student s2 = new Student("Bravee","06","bravee3000@gmail.com");
 		// save the students obj
